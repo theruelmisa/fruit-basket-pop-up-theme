@@ -23,6 +23,7 @@ window.onload = () => {
 		"email-modal__form-group"
 	)[0];
 	const emailThankMsg = document.getElementsByClassName("email-thank")[0];
+	const userEmail = document.getElementsByClassName("email-thank__user")[0];
 
 	// Callbacks and Functions
 	const emailValidityHandler = (email) => {
@@ -47,6 +48,7 @@ window.onload = () => {
 		) {
 			modalState.emails.push(emailInputField.value);
 			emailThankMsg.classList.add("email-thank--success");
+			userEmail.textContent = emailInputField.value;
 		} else {
 			errorMsg.classList.add("email-modal__error-msg--active");
 			emailFormGroup.classList.add("email-modal__form-group--error");
