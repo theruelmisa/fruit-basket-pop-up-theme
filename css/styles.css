@@ -1,6 +1,19 @@
-/* font-family: 'Dancing Script', cursive;
+/* VARIABLES */
 
-font-family: 'Open Sans', sans-serif; */
+:root {
+	/* Colors */
+	--black-text: #22292f;
+	--blackbg: #1b2025;
+	--white-text: #f8fcfd;
+	--whitebg: #fafafa;
+	--dark-grey-text: rgba(221, 221, 221, 0.6);
+	--light-grey-text: #f3f4f6;
+	--greybg: #dfe4e8;
+	--green-text: #007b24;
+	--error: #cc2625;
+}
+
+/* GLOBAL RESET */
 *,
 *::after,
 *::before {
@@ -17,6 +30,8 @@ body {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
 	line-height: 1.4;
+	background: var(--whitebg);
+	color: var(--black-text);
 }
 
 ol,
@@ -38,12 +53,12 @@ textarea:focus {
 /* MAIN CONTENT */
 
 .main-header {
-	background: #e1e2e3;
 	padding: 2rem;
+	background: var(--blackbg);
+	color: var(--white-text);
 }
 
 .content-area {
-	background: #a3bef0;
 	height: 100vh;
 	font-size: 5rem;
 	display: flex;
@@ -64,7 +79,7 @@ textarea:focus {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.65);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -87,7 +102,7 @@ textarea:focus {
 }
 
 .email-modal .gg-close {
-	color: #fafafa;
+	color: var(--white-text);
 }
 
 .gg-close {
@@ -95,10 +110,10 @@ textarea:focus {
 }
 
 .email-modal__container {
-	background: rgba(29, 103, 200, 1);
+	background: var(--blackbg);
 	max-width: 70rem;
 	width: 100%;
-	color: #fafafa;
+	color: var(--white-text);
 	display: flex;
 	position: relative;
 	overflow: hidden;
@@ -119,7 +134,7 @@ textarea:focus {
 }
 
 .email-modal__message {
-	color: rgba(221, 221, 221, 0.6);
+	color: var(--dark-grey-text);
 	font-weight: 300%;
 	line-height: 1.8;
 	font-size: 1.4rem;
@@ -127,11 +142,11 @@ textarea:focus {
 }
 
 .email-modal__highlight-text {
-	color: #fafafa;
+	color: var(--light-grey-text);
 }
 
 .email-modal__error-msg {
-	color: black;
+	color: var(--error);
 	margin-bottom: 0.5rem;
 	font-size: 1.2rem;
 	display: none;
@@ -142,14 +157,14 @@ textarea:focus {
 }
 
 .email-modal__form-group {
-	background: #fafafa;
+	background: var(--whitebg);
 	display: flex;
 	padding: 1rem;
 	margin-bottom: 1.5rem;
 }
 
 .email-modal__form-group--error {
-	border: 2px solid red;
+	border: 2px solid var(--error);
 }
 
 .email-modal__input {
@@ -161,15 +176,15 @@ textarea:focus {
 
 .email-modal__button {
 	cursor: pointer;
-	background: rgba(81, 158, 71, 1);
-	color: #fafafa;
+	background: var(--green-text);
+	color: var(--white-text);
 	border: 0;
 	width: 15rem;
 }
 
 .email-modal__decline-offer {
 	cursor: pointer;
-	color: rgba(108, 148, 199, 1);
+	color: var(--dark-grey-text);
 	text-decoration: underline;
 	font-size: 1rem;
 	font-style: italic;
@@ -177,7 +192,7 @@ textarea:focus {
 }
 
 .email-modal__decline-offer:hover {
-	color: #fafafa;
+	color: var(--light-grey-text);
 }
 
 .email-modal__side-image img {
@@ -190,8 +205,8 @@ textarea:focus {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #fafafa;
-	color: #3c3c3c;
+	background: var(--whitebg);
+	color: var(--black-text);
 	transform: translate3d(100%, 0, 0);
 	transition: all 0.5s ease-in-out;
 	display: flex;
@@ -214,8 +229,13 @@ textarea:focus {
 
 .email-thank__message {
 	font-size: 1.4rem;
-	font-weight: 300;
 	transition: opacity 0.3s ease-in-out 0.8s;
+}
+
+.email-thank__message--emphasis {
+	font-weight: 700;
+	text-align: center;
+	display: block;
 }
 
 .email-thank--success {
