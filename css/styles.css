@@ -29,6 +29,14 @@ a {
 	text-decoration: none;
 }
 
+input:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+/* MAIN CONTENT */
+
 .main-header {
 	background: #e1e2e3;
 	padding: 2rem;
@@ -44,16 +52,10 @@ a {
 }
 
 .logo {
-	font-family: "Dancing Script", cursive;
 	font-weight: 700;
 	font-size: 2.5rem;
 	transform: scale(0.8);
 	width: 8rem;
-}
-
-.logo__sub {
-	font-family: "Open Sans", sans-serif;
-	font-size: 1.6rem;
 }
 
 .email-modal {
@@ -128,11 +130,26 @@ a {
 	color: #fafafa;
 }
 
+.email-modal__error-msg {
+	color: black;
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+	display: none;
+}
+
+.email-modal__error-msg--active {
+	display: block;
+}
+
 .email-modal__form-group {
 	background: #fafafa;
 	display: flex;
 	padding: 1rem;
 	margin-bottom: 1.5rem;
+}
+
+.email-modal__form-group--error {
+	border: 2px solid red;
 }
 
 .email-modal__input {
