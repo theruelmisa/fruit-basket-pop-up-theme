@@ -10,7 +10,7 @@
 
 ### Project Description
 
-**Medusa** is a modal pop-up theme that can be used as a boiler plate for future projects. JavaScript allows it to pop up when mouse leaves the page's window. It is also used to close the modal, check for errors on the email input field, and capturing emails.
+**Fruit Basket** is a modal pop-up theme that can be used as a boiler plate for future projects. JavaScript allows it to pop up when mouse leaves the page's window. It is also used to close the modal, check for errors on the email input field, and capturing emails.
 
 **Project Link**
 
